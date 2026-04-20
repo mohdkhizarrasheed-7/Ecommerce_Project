@@ -62,8 +62,8 @@ public class Product {
             return stock;
         }
 
-        public void setStock(Integer stock) {
-            this.stock = stock;
+        public Integer setStock(Integer stock) {
+            return this.stock = stock;
         }
 
         public String getImageUrl() {

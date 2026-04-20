@@ -33,6 +33,26 @@ public class ProductController {
     public Product getById(@PathVariable Long id) {
         return service.getProductById(id);
     }
+    
+    @PutMapping("/{id}")
+    public Product update(@PathVariable Long id,
+    						@RequestBody Product product)
+    {
+    	return service.updateProduct(id, product);
+    }
+    
+    @GetMapping("/search/{name}")
+    public List<Product> search(@PathVariable String name)
+    {
+    	return service.searchByName(name);		
+    }
+    
+    @GetMapping("/category/{categoryId}")
+    public List<Product> byCategory(@PathVariable Long categoryId)
+    {
+    	return service.getByCategory(categoryId);
+    }
+    
 
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Long id) {
