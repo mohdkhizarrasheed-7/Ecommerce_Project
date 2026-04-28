@@ -8,7 +8,7 @@ public interface WishlistService {
 
     Wishlist add(Wishlist wishlist);
 
-    List<Wishlist> getByUser(Long userId);
+    List<Wishlist> getUser(Long userId);
 
-    void remove(Long id);
+    void delete(Long id);
 }

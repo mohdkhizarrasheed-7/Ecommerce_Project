@@ -16,15 +16,15 @@ public class WishlistServiceImpl implements WishlistService {
     private final UserRepository userRepository;
     private final ProductRepository productRepository;
 
-    public WishlistServiceImpl(WishlistRepository repository,
-                               UserRepository userRepository,
-                               ProductRepository productRepository) {
-        this.repository = repository;
-        this.userRepository = userRepository;
-        this.productRepository = productRepository;
-    }
+    public WishlistServiceImpl(WishlistRepository repository, UserRepository userRepository,
+			ProductRepository productRepository) {
+		super();
+		this.repository = repository;
+		this.userRepository = userRepository;
+		this.productRepository = productRepository;
+	}
 
-    @Override
+	@Override
     public Wishlist add(Wishlist wishlist) {
 
         Long userId = wishlist.getUser().getId();
@@ -41,13 +41,11 @@ public class WishlistServiceImpl implements WishlistService {
         return repository.save(wishlist);
     }
 
-    @Override
-    public List<Wishlist> getByUser(Long userId) {
+    public List<Wishlist> getUser(Long userId) {
         return repository.findByUserId(userId);
     }
 
-    @Override
-    public void remove(Long id) {
+    public void delete(Long id) {
         repository.deleteById(id);
     }
 }

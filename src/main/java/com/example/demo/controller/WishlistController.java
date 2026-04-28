@@ -30,12 +30,12 @@ public class WishlistController {
 
     @GetMapping("/{userId}")
     public List<Wishlist> get(@PathVariable Long userId) {
-        return service.getByUser(userId);
+        return service.getUser(userId);
     }
 
     @DeleteMapping("/{id}")
     public String remove(@PathVariable Long id) {
-        service.remove(id);
+        service.delete(id);
         return "Removed from wishlist";
     }
 }
