@@ -144,7 +144,7 @@ src/main/java/com/ecommerce
 ## ✅ Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/ecommerce-project.git
+git clone https://github.com/mrasheed-dev/Ecommerce_Project
 ```
 
 ---
